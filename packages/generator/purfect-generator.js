@@ -31,6 +31,16 @@ const createPage = (argv) => {
   executeCommand(`${HYGEN} page new --name ${argv.name}`, env)
 }
 
+const createComponent = (argv) => {
+  const COMPONENTS_FOLDER = `${process.cwd()}/components`
+
+  if (!fs.existsSync(COMPONENTS_FOLDER)) {
+    exit('components folder not found')
+  }
+
+  executeCommand(`${HYGEN} component new --name ${argv.name}`, env)
+}
+
 cliFactory([
   {
     name: 'cli',
@@ -59,6 +69,20 @@ cliFactory([
       }
     ],
     callback: createPage
+  },
+  {
+    name: 'component',
+    describe: 'generate react component',
+    args: [
+      {
+        name: 'name',
+        options: {
+          describe: 'choose filename for your component',
+          default: 'new-component'
+        }
+      }
+    ],
+    callback: createComponent
   }
 ])
 
