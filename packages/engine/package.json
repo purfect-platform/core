@@ -1,0 +1,19 @@
+{
+  "name": "@purfect/engine",
+  "version": "0.1.0",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "@types/node": "^17.0.23",
+    "next": "^12.1.4",
+    "ts-node": "^10.7.0",
+    "typescript": "^4.6.3",
+    "@purfect/bin-helper": "*"
+  },
+  "scripts": {
+    "dev": "next dev"
+  },
+  "bin": {
+    "purfect-engine": "./purfect-engine.js"
+  }
+}

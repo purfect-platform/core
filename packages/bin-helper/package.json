@@ -1,0 +1,11 @@
+{
+  "name": "@purfect/bin-helper",
+  "version": "0.1.0",
+  "exports": "./bin-helper.js",
+  "type": "module",
+  "license": "MIT",
+  "dependencies": {
+    "execa": "^6.1.0",
+    "yargs": "^17.4.0"
+  }
+}

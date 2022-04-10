@@ -1,0 +1,17 @@
+{
+  "name": "generator",
+  "version": "0.1.0",
+  "type": "module",
+  "export": "index.js",
+  "license": "MIT",
+  "dependencies": {
+    "@purfect/bin-helper": "*",
+    "chalk": "^5.0.1",
+    "glob": "^7.2.0",
+    "glob-promise": "^4.2.2",
+    "hygen": "^6.2.0"
+  },
+  "bin": {
+    "purfect-generator": "./purfect-generator.js"
+  }
+}
