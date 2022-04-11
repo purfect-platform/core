@@ -14,7 +14,9 @@
     "eslint-plugin-react": "^7.29.4"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^12.1.4",
     "eslint-config-prettier": "^8.5.0",
+    "eslint-plugin-react-hooks": "^4.4.0",
     "prettier": "^2.6.1"
   },
   "bin": {
