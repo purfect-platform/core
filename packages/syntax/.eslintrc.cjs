@@ -37,6 +37,9 @@ module.exports = {
         namedComponents: 'arrow-function'
       }
     ],
+    'react/jsx-no-bind': 'off',
+    'react/forbid-component-props': 'off',
+    'react/jsx-sort-props': 'off',
     'react/jsx-filename-extension': 'off',
     'react/jsx-max-depth': 'off',
     'react/jsx-no-literals': 'off',
@@ -60,6 +63,8 @@ module.exports = {
         semi: false,
         trailingComma: 'none'
       }
-    ]
+    ],
+    'no-unused-vars': 'off',
+    '@typescript-eslint/no-unused-vars': 'error'
   }
 }
