@@ -41,6 +41,16 @@ const createComponent = (argv) => {
   executeCommand(`${HYGEN} component new --name ${argv.name}`, env)
 }
 
+const createHook = (argv) => {
+  const COMPONENTS_FOLDER = `${process.cwd()}/hooks`
+
+  if (!fs.existsSync(COMPONENTS_FOLDER)) {
+    exit('hooks folder not found')
+  }
+
+  executeCommand(`${HYGEN} hook new --name ${argv.name}`, env)
+}
+
 cliFactory([
   {
     name: 'cli',
@@ -54,7 +64,8 @@ cliFactory([
         }
       }
     ],
-    callback: (argv) => executeCommand(`${HYGEN} cli new --name ${argv.name}`, env)
+    callback: (argv) =>
+      executeCommand(`${HYGEN} cli new --name ${argv.name}`, env)
   },
   {
     name: 'page',
@@ -78,11 +89,25 @@ cliFactory([
         name: 'name',
         options: {
           describe: 'choose filename for your component',
-          default: 'new-component'
+          default: 'NewComponent'
         }
       }
     ],
     callback: createComponent
+  },
+  {
+    name: 'hook',
+    describe: 'generate react hook',
+    args: [
+      {
+        name: 'name',
+        options: {
+          describe: 'choose filename for your hook',
+          default: 'newHook'
+        }
+      }
+    ],
+    callback: createHook
   }
 ])
 
