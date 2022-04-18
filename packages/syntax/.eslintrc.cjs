@@ -37,6 +37,7 @@ module.exports = {
         namedComponents: 'arrow-function'
       }
     ],
+    'react/require-default-props': 'off',
     'react/jsx-no-bind': 'off',
     'react/forbid-component-props': 'off',
     'react/jsx-sort-props': 'off',
