@@ -37,6 +37,14 @@ module.exports = {
         namedComponents: 'arrow-function'
       }
     ],
+    // 'react/jsx-wrap-multilines': [
+    //   'error',
+    //   {
+    //     declaration: 'parens-new-line',
+    //     condition: 'parens-new-line',
+    //     logical: 'parens-new-line'
+    //   }
+    // ],
     'react/require-default-props': 'off',
     'react/jsx-no-bind': 'off',
     'react/forbid-component-props': 'off',
