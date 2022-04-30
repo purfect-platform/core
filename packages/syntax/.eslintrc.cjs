@@ -29,8 +29,14 @@ module.exports = {
     'no-multi-spaces': 'error',
     // note you must disable the base rule as it can report incorrect errors
     'no-use-before-define': 'off',
+    'padding-line-between-statements': [
+      'error',
+      { blankLine: 'always', prev: '*', next: ['return', 'if'] },
+      { blankLine: 'always', prev: ['if', 'import'], next: '*' }
+    ],
     'jsx-quotes': ['error', 'prefer-single'],
     '@typescript-eslint/no-use-before-define': ['error'],
+    '@typescript-eslint/no-empty-function': 'off',
     'react/function-component-definition': [
       'error',
       {
