@@ -32,7 +32,27 @@ module.exports = {
     'padding-line-between-statements': [
       'error',
       { blankLine: 'always', prev: '*', next: ['return', 'if'] },
-      { blankLine: 'always', prev: ['if', 'import'], next: '*' }
+      // Always require blank lines after import, never between imports
+      { blankLine: 'always', prev: 'import', next: '*' },
+      { blankLine: 'never', prev: 'import', next: 'import' },
+      // Always new line after if
+      { blankLine: 'always', prev: ['if'], next: '*' },
+      // Always require blank lines before and after every sequence of variable declarations and export
+      {
+        blankLine: 'always',
+        prev: '*',
+        next: ['const', 'let', 'var', 'export']
+      },
+      {
+        blankLine: 'always',
+        prev: ['const', 'let', 'var', 'export'],
+        next: '*'
+      },
+      {
+        blankLine: 'any',
+        prev: ['const', 'let', 'var', 'export'],
+        next: ['const', 'let', 'var', 'export']
+      }
     ],
     'jsx-quotes': ['error', 'prefer-single'],
     '@typescript-eslint/no-use-before-define': ['error'],
