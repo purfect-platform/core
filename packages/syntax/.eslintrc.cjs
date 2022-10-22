@@ -24,7 +24,7 @@ module.exports = {
       version: 'detect'
     }
   },
-  plugins: ['react', '@typescript-eslint', 'prettier'],
+  plugins: ['react', '@typescript-eslint', 'prettier', 'prettier/react'],
   rules: {
     'no-multi-spaces': 'error',
     // note you must disable the base rule as it can report incorrect errors
