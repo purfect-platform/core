@@ -24,7 +24,7 @@ module.exports = {
       version: 'detect'
     }
   },
-  plugins: ['react', '@typescript-eslint', 'prettier', 'prettier/react'],
+  plugins: ['react', '@typescript-eslint', 'prettier'],
   rules: {
     'no-multi-spaces': 'error',
     // note you must disable the base rule as it can report incorrect errors
@@ -78,7 +78,7 @@ module.exports = {
     'react/jsx-filename-extension': 'off',
     'react/jsx-max-depth': 'off',
     'react/jsx-no-literals': 'off',
-    'react/jsx-indent': ['error', 2, { checkAttributes: true }],
+    // 'react/jsx-indent': ['error', 2, { checkAttributes: true }],
     'react/jsx-indent-props': ['error', 2],
     'react/jsx-props-no-spreading': 'off',
     'react/jsx-tag-spacing': [
@@ -96,7 +96,8 @@ module.exports = {
         singleQuote: true,
         jsxSingleQuote: true,
         semi: false,
-        trailingComma: 'none'
+        trailingComma: 'none',
+        printWidth: 100
       }
     ],
     'no-unused-vars': 'off',

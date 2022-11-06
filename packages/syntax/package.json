@@ -1,6 +1,6 @@
 {
   "name": "@purfect/syntax",
-  "version": "0.1.12",
+  "version": "0.1.13",
   "type": "module",
   "license": "MIT",
   "dependencies": {
@@ -10,7 +10,6 @@
     "@typescript-eslint/parser": "^5.17.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.5.0",
-    "eslint-config-prettier-react": "^0.0.24",
     "eslint-config-standard": "^16.0.3",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-node": "^11.1.0",
