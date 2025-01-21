@@ -90,6 +90,7 @@ module.exports = {
         beforeClosing: 'never'
       }
     ],
+    'react/react-in-jsx-scope': 'off',
     'prettier/prettier': [
       'error',
       {
