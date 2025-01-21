@@ -102,6 +102,63 @@ module.exports = {
       }
     ],
     'no-unused-vars': 'off',
-    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }]
+    '@typescript-eslint/no-unused-vars': ['error', { argsIgnorePattern: '^_' }],
+    'sort-imports': [
+      'error',
+      {
+        ignoreCase: false,
+        ignoreDeclarationSort: true,
+        ignoreMemberSort: false,
+        memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
+        allowSeparatedGroups: false
+      }
+    ],
+    'import/no-duplicates': 'error',
+    'import/order': [
+      'error',
+      {
+        groups: [
+          'builtin',
+          'external',
+          'internal',
+          ['sibling', 'parent'],
+          'index',
+          'object',
+          'type'
+        ],
+        pathGroups: [
+          {
+            pattern: 'react',
+            group: 'external',
+            position: 'before'
+          },
+          {
+            pattern: 'react-**',
+            group: 'external',
+            position: 'before'
+          },
+          {
+            pattern: '@app/**',
+            group: 'internal',
+            position: 'after'
+          },
+          {
+            pattern: '@**/**',
+            group: 'external',
+            position: 'after'
+          },
+          {
+            pattern: '**/*.css',
+            group: 'type',
+            position: 'after'
+          }
+        ],
+        pathGroupsExcludedImportTypes: ['react', 'react-**'],
+        alphabetize: {
+          order: 'asc',
+          caseInsensitive: true
+        }
+      }
+    ]
   }
 }
