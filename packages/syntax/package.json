@@ -1,6 +1,6 @@
 {
   "name": "@purfect/syntax",
-  "version": "0.1.17",
+  "version": "0.1.21",
   "type": "module",
   "license": "MIT",
   "dependencies": {
@@ -18,7 +18,8 @@
     "eslint-plugin-promise": "^5.2.0",
     "eslint-plugin-react": "^7.29.4",
     "eslint-plugin-react-hooks": "^4.4.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "typescript-eslint": "^8.21.0"
   },
   "bin": {
     "purfect-syntax": "./purfect-syntax.js"
