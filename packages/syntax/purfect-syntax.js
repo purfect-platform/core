@@ -1,11 +1,9 @@
 #!/usr/bin/env node --experimental-modules --no-warnings
 
-import { cliFactory, executeCommand, getDirname } from '@purfect/bin-helper'
-
-const __dirname = getDirname(import.meta.url)
+import { cliFactory, executeCommand } from '@purfect/bin-helper'
 
 const cwd = process.cwd()
-const ESLINT = `${cwd}/node_modules/.bin/eslint --resolve-plugins-relative-to ${cwd} --config ${__dirname}/.eslintrc.cjs`
+const ESLINT = `${cwd}/node_modules/.bin/eslint`
 
 cliFactory([
   {

@@ -1,17 +1,10 @@
 ## Usage
 
-via `package.json`
+Create `eslint.config.mjs` with following contents
 
 ```
-"eslintConfig": {
-  "extends": "./node_modules/@purfect/syntax/eslint.config.mjs"
-}
-```
+import config from './node_modules/@purfect/syntax/eslint.config.mjs'
 
-via `.eslintrc`
+export default config
 
-```
-{
-  "extends": "./node_modules/@purfect/syntax/eslint.config.mjs"
-}
 ```
