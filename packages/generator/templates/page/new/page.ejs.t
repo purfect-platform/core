@@ -1,5 +1,5 @@
 ---
-to: pages/<%= h.changeCase.param(name) %>.tsx
+to: src/pages/<%= h.changeCase.param(name) %>.tsx
 ---
 import React from 'react'
 import styles from './<%= h.changeCase.pascal(name) %>.module.css'

@@ -1,4 +1,4 @@
 ---
-to: hooks/<%= h.changeCase.camelCase(name) %>/index.ts
+to: src/hooks/<%= h.changeCase.camelCase(name) %>/index.ts
 ---
 export * from './<%= h.changeCase.camelCase(name) %>'

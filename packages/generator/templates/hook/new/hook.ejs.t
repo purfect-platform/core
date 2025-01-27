@@ -1,5 +1,5 @@
 ---
-to: hooks/<%= h.changeCase.camelCase(name) %>/<%= h.changeCase.camelCase(name) %>.tsx
+to: src/hooks/<%= h.changeCase.camelCase(name) %>/<%= h.changeCase.camelCase(name) %>.tsx
 ---
 import { useState } from 'react'
 
